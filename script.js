@@ -32,6 +32,7 @@ btn.onclick = function (e) {
       case 'ko':
       case 'cocacola':
       case 'coca-cola':
+      case 'coca cola':
         const koadd = document.querySelectorAll('#abr, #jul, #oct, #dic');
         koadd.forEach((element) => {
           element.classList.add('boxpaint');
