@@ -19,6 +19,16 @@ const error = document.getElementById('err');
 let btn = document.getElementById("btn");
 let ul = document.getElementById('ul');
 
+
+window.onload = function () {
+  const dark_mode = document.getElementById("darkmode")
+  const body = document.body;
+
+  dark_mode.onclick = function() {
+    body.classList.toggle("dark-mode")
+  };
+}
+
 btn.onclick = function (e) {
   e.preventDefault();
 
