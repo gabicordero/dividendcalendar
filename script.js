@@ -26,6 +26,7 @@ window.onload = function () {
 
   dark_mode.onclick = function() {
     body.classList.toggle("dark-mode")
+    header.classList.toggle("dark-mode")
   };
 }
 
