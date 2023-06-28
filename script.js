@@ -560,10 +560,18 @@ btn.onclick = function (e) {
 
   mostrarDividendo();
 
-
 }
 
 
 /*Agregar función de hacer click en la card del mes y que figure las acciones que pagan en ese mes
 se puede agregar una animación que gire la card*/
 
+enero.addEventListener('click',() => {
+  enero.innerHTML = `
+    <div>
+      <ul>
+        <li>Mo</li>
+      </ul>
+    </div>
+  `
+})
