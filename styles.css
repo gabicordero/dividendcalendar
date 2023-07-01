@@ -54,6 +54,11 @@ p {
     cursor: pointer;
     color: #f3f3f3;
     border: 2px solid #f3f3f3;
+    transition: .2s ease background;
+}
+
+.box:hover {
+    background: #777777;
 }
 
 div p {
@@ -79,11 +84,12 @@ input[type="text"] {
 input[type="submit"] {
     background:transparent;
     color: #f3f3f3;
-    padding: 10px 20px;
+    padding: 8px 20px;
     border: 2px solid #777777;
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
+    margin-top: 3px;
 }
 
 .boxpaint {
@@ -106,4 +112,25 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
+.stocks {
+    color: #f3f3f3;
+}
+
+.ul-list {
+    display: grid;
+    width: 200px;
+    justify-content: center;
+    margin: 2rem auto;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.list {
+    margin-top: 2rem;
+
+}
+
+.div-list {
+    text-align: center;
+}
 /*Agregar responsive
