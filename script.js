@@ -18,7 +18,11 @@ const octubre = document.getElementById('oct');
 const noviembre = document.getElementById('nov');
 const diciembre = document.getElementById('dic');
 
-
+// Append class boxpaint in month of stock selected
+const appendClass = (...args) => {
+  for (let arg of args) arg.classList.add('boxpaint')
+  return args;
+}
 
 btn.onclick = function (e) {
   e.preventDefault();
@@ -32,114 +36,80 @@ btn.onclick = function (e) {
       case 'coca-cola':
       case 'coca cola':
         clearAllBackgroundBox()
-        document.querySelectorAll('#abr, #jul, #oct, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-        stockName.textContent = 'Coca-Cola Co';
+        appendClass(abril, julio, octubre, diciembre)
+        showStockName('Coca-Cola Co');
         break;
 
       case 'pep':
       case 'pepsi':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #mar, #jun, #sep').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-        stockName.textContent = 'PepsiCo Inc';
+        appendClass(enero, marzo, junio, septiembre)
+        showStockName('PepsiCo Inc');
         break;
 
       case 'v':
       case 'visa':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Visa';
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName('Visa');
         break;
 
       case 't':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'AT&T Inc';
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName('AT&T Inc');
         break;
 
       case 'xom':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Exxon Mobil Corp';
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName('Exxon Mobil Corp')
         break;
 
       case 'vz':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Verizon Communications Inc';
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName('Verizon Communications Inc')
         break;
 
       case 'cvx':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Chevron Corp';
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName('Chevron Corp')
         break;
 
       case 'aapl':
       case 'apple':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Apple Inc';
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName('Apple Inc')
         break;
 
       case 'mcd':
       case 'mcdonalds':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'McDonalds';
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName('McDonalds')
         break;
 
       case 'wmt':
       case 'walmart':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jun, #sep').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Wal-Mart';
+        appendClass(enero, abril, junio, septiembre)
+        showStockName('Wal-Mart')
         break;
 
       case 'mo':
       case 'altria':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = 'Altria Group';
+        appendClass(enero, abril, julio, octubre)
+        showStockName('Altria Group')
         break;
 
       case 'low':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Lowe's Companies Inc";
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName("Lowe's Companies Inc")
         break;
 
       case 'trow':
@@ -411,6 +381,11 @@ const clearStockName = () => {
   stockName.textContent = '';
 }
 
+// Show text with name of stock
+
+const showStockName = (name) => {
+  stockName.textContent = name
+}
 
 // Clear all box paint
 
