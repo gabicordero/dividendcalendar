@@ -138,4 +138,40 @@ input[type="submit"]:hover {
 .paintMonth {
     background: #777777;
 }
-/*Agregar responsive
+/* /*Agregar responsive */
+
+@media (max-width: 767.98px) {
+    .main {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .box {
+        width: 10rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .box {
+        width: 8.5rem;
+        height: 3.4rem;
+    }
+}
