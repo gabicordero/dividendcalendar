@@ -1,6 +1,6 @@
 
 const input = document.getElementById("ticker");
-const error = document.getElementById('err');
+const stockName = document.getElementById('err');
 
 const btn = document.getElementById("btn");
 
@@ -35,7 +35,7 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Coca-Cola Co';
+        stockName.textContent = 'Coca-Cola Co';
         break;
 
       case 'pep':
@@ -48,7 +48,7 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'PepsiCo Inc';
+        stockName.textContent = 'PepsiCo Inc';
         break;
 
       case 'v':
@@ -61,7 +61,7 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Visa';
+        stockName.textContent = 'Visa';
         break;
 
       case 't':
@@ -73,32 +73,31 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         });
 
-        error.textContent = 'AT&T Inc';
+        stockName.textContent = 'AT&T Inc';
         break;
 
       case 'xom':
-        const xomadd = document.querySelectorAll('#mar, #jun, #sep, #dic');
-        xomadd.forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const xomrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov');
-        xomrem.forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Exxon Mobil Corp';
+        stockName.textContent = 'Exxon Mobil Corp';
         break;
 
       case 'vz':
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {element.classList.add('boxpaint');
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+          element.classList.add('boxpaint');
         });
 
         document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Verizon Communications Inc';
+        stockName.textContent = 'Verizon Communications Inc';
         break;
 
       case 'cvx':
@@ -110,324 +109,320 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Chevron Corp';
+        stockName.textContent = 'Chevron Corp';
         break;
 
       case 'aapl':
       case 'apple':
-        const aapladd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const aaplrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Apple Inc';
+        stockName.textContent = 'Apple Inc';
         break;
 
       case 'mcd':
       case 'mcdonalds':
-        const mcdadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const mcdrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'McDonald’s';
+        stockName.textContent = 'McDonald’s';
         break;
 
       case 'wmt':
       case 'walmart':
-        const wmtadd = document.querySelectorAll('#ene, #abr, #jun, #sep').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jun, #sep').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const wmtrem = document.querySelectorAll('#feb, #mar, #may, #jul, #ago, #oct, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jul, #ago, #oct, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Wal-Mart';
+        stockName.textContent = 'Wal-Mart';
         break;
 
       case 'mo':
       case 'altria':
-        const moadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const morem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = 'Altria Group';
+        stockName.textContent = 'Altria Group';
         break;
 
       case 'low':
-        const lowadd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const lowrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Lowe's Companies Inc";
+        stockName.textContent = "Lowe's Companies Inc";
         break;
 
       case 'trow':
-        const trowadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const trowrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "T. Rowe Price Group Inc";
+        stockName.textContent = "T. Rowe Price Group Inc";
         break;
 
       case 'pfizer':
       case 'pfe':
-        const pfiadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const pfirem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Pfizer Inc";
+        stockName.textContent = "Pfizer Inc";
         break;
 
       case 'pg':
-        const pgadd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const pgrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Procter & Gamble Company";
+        stockName.textContent = "Procter & Gamble Company";
         break;
 
       case 'vfc':
-        const vfcadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const vfcrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "VF Corp";
+        stockName.textContent = "VF Corp";
         break;
 
       case 'wba':
-        const wbaadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const wbarem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Walgreens Boots Alliance Inc";
+        stockName.textContent = "Walgreens Boots Alliance Inc";
         break;
 
       case 'mmm':
-        const mmmadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const mmmrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "3M Company";
+        stockName.textContent = "3M Company";
         break;
 
       case 'ibm':
-        const ibmadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const ibmrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "International Business Machines";
+        stockName.textContent = "International Business Machines";
         break;
 
       case 'leg':
-        const legadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const legrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Leggett & Platt Incorporated";
+        stockName.textContent = "Leggett & Platt Incorporated";
         break;
 
       case 'o':
-        const oadd = document.querySelectorAll('#ene, #abr, #jul, #oct, #feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct, #feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const orem = document.querySelectorAll('').forEach((element) => {
-          element.classList.remove('boxpaint');
-        })
-
-        error.textContent = "Realty Income Corp";
+        stockName.textContent = "Realty Income Corp";
         break;
 
       case 'abbv':
-        const abbvadd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const abbvrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "AbbVie Inc";
+        stockName.textContent = "AbbVie Inc";
         break;
 
       case 'amcr':
-        const amcradd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const amcrrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Amcor PLC";
+        stockName.textContent = "Amcor PLC";
         break;
 
       case 'frt':
-        const frtadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const frtrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Federal Realty Investment Trust";
+        stockName.textContent = "Federal Realty Investment Trust";
         break;
 
       case 'ess':
-        const essadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const essrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Essex Property Trust Inc";
+        stockName.textContent = "Essex Property Trust Inc";
         break;
 
       case 'ben':
-        const benadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const benrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Franklin Resources Inc";
+        stockName.textContent = "Franklin Resources Inc";
         break;
 
       case 'kmb':
-        const kmbadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const kmbrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Kimberly-Clark Corp";
+        stockName.textContent = "Kimberly-Clark Corp";
         break;
 
       case 'ed':
-        const edadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const edrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Consolidated Edison Inc";
+        stockName.textContent = "Consolidated Edison Inc";
         break;
 
       case 'swk':
-        const swkadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const swkrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Stanley Black & Decker Inc";
+        stockName.textContent = "Stanley Black & Decker Inc";
         break;
 
       case 'mdt':
-        const mdtadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const mdtrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Medtronic PLC";
+        stockName.textContent = "Medtronic PLC";
         break;
 
       case 'clx':
-        const cloroxadd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const cloroxrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Clorox Co";
+        stockName.textContent = "Clorox Co";
         break;
 
       case 'jnj':
-        const jnjadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const jnjrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Johnson & Johnson";
+        stockName.textContent = "Johnson & Johnson";
         break;
 
       case 'sjm':
-        const sjmadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const sjmrem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "JM Smucker Company";
+        stockName.textContent = "JM Smucker Company";
         break;
 
       case 'cinf':
@@ -439,7 +434,7 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Cincinnati Financial Corporation";
+        stockName.textContent = "Cincinnati Financial Corporation";
         break;
 
       case 'syy':
@@ -451,81 +446,70 @@ btn.onclick = function (e) {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Sysco Corporation";
+        stockName.textContent = "Sysco Corporation";
         break;
 
       case 'cl':
-        const cladd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const clrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Colgate-Palmolive Company";
+        stockName.textContent = "Colgate-Palmolive Company";
         break;
 
       case 'ato':
-        const atoadd = document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
+        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const atorem = document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
+        document.querySelectorAll('#ene, #feb, #abr, #may, #jul, #ago, #oct, #nov').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Atmos Energy Corporation";
+        stockName.textContent = "Atmos Energy Corporation";
         break;
 
       case 'cah':
-        const cahadd = document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
+        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const cahrem = document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
+        document.querySelectorAll('#feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Cardinal Health Inc";
+        stockName.textContent = "Cardinal Health Inc";
         break;
 
       case 'apd':
-        const apdadd = document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
+        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
           element.classList.add('boxpaint');
         });
 
-        const apdrem = document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
+        document.querySelectorAll('#ene, #mar, #abr, #jun, #jul, #sep, #oct, #dic').forEach((element) => {
           element.classList.remove('boxpaint');
         })
 
-        error.textContent = "Air Products and Chemicals Inc";
+        stockName.textContent = "Air Products and Chemicals Inc";
         break;
 
       /*Acciones que no pagan dividendo*/
 
       case 'amzn':
       case 'amazon':
-        const amznrem = document.querySelectorAll('.box').forEach((element) => {
+        document.querySelectorAll('.box').forEach((element) => {
           element.classList.remove('boxpaint');
         })
-        error.textContent = 'Amazon no paga dividendos';
+        stockName.textContent = 'Amazon no paga dividendos';
         break;
 
       default:
-        enero.classList.remove('boxpaint');
-        febrero.classList.remove('boxpaint');
-        marzo.classList.remove('boxpaint');
-        abril.classList.remove('boxpaint');
-        mayo.classList.remove('boxpaint');
-        junio.classList.remove('boxpaint');
-        julio.classList.remove('boxpaint');
-        agosto.classList.remove('boxpaint');
-        septiembre.classList.remove('boxpaint');
-        octubre.classList.remove('boxpaint');
-        noviembre.classList.remove('boxpaint');
-        diciembre.classList.remove('boxpaint');
-        error.textContent = 'No stock found';
+        clearAllBackgroundBox()
+        stockName.textContent = 'No stock found';
 
     }
   }
@@ -534,21 +518,82 @@ btn.onclick = function (e) {
 }
 
 
+const clearAllBackgroundBox = () => {
+  enero.classList.remove('boxpaint');
+  febrero.classList.remove('boxpaint');
+  marzo.classList.remove('boxpaint');
+  abril.classList.remove('boxpaint');
+  mayo.classList.remove('boxpaint');
+  junio.classList.remove('boxpaint');
+  julio.classList.remove('boxpaint');
+  agosto.classList.remove('boxpaint');
+  septiembre.classList.remove('boxpaint');
+  octubre.classList.remove('boxpaint');
+  noviembre.classList.remove('boxpaint');
+  diciembre.classList.remove('boxpaint');
+}
+
+
+const stockList = document.querySelector('.div-list')
 
 const appendList = () => {
-  const stockList = document.querySelector('.div-list')
+
   enero.addEventListener('click', () => {
+    clearAllBox()
+    clearAllBackgroundBox()
+    enero.classList.add('paintMonth')
     stockList.innerHTML = `
+    <div class="div_list">
     <span>January:</span>
     <ul class="ul-list">
-      <li class="stocks">ko</li>
-      <li class="stocks">appl</li>
+      <li class="stocks">syy</li>
+      <li class="stocks">cinf</li>
     </ul>
+    </div>
+    `
+  })
+
+  febrero.addEventListener('click', () => {
+    clearAllBox()
+    clearAllBackgroundBox()
+
+    febrero.classList.add('paintMonth')
+    stockList.innerHTML = `
+    <div class="div_list">
+    <span>February:</span>
+    <ul class="ul-list">
+      <li class="stocks">cl</li>
+    </ul>
+    </div>
     `
   })
 }
 
 appendList()
+
+const clearList = () => {
+  stockList.innerHTML = ''
+}
+
+const clearBox = () => {
+  enero.classList.remove('paintMonth');
+  febrero.classList.remove('paintMonth');
+  marzo.classList.remove('paintMonth');
+  abril.classList.remove('paintMonth');
+  mayo.classList.remove('paintMonth');
+  junio.classList.remove('paintMonth');
+  julio.classList.remove('paintMonth');
+  agosto.classList.remove('paintMonth');
+  septiembre.classList.remove('paintMonth');
+  octubre.classList.remove('paintMonth');
+  noviembre.classList.remove('paintMonth');
+  diciembre.classList.remove('paintMonth');
+}
+
+const clearAllBox = () => {
+  clearList()
+  clearBox()
+}
 
 /*Agregar función de hacer click en la card del mes y que figure las acciones que pagan en ese mes
 se puede agregar una animación que gire la card*/

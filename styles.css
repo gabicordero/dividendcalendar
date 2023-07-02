@@ -132,5 +132,10 @@ input[type="submit"]:hover {
 
 .div-list {
     text-align: center;
+    transition: all 0.3s linear;
+}
+
+.paintMonth {
+    background: #777777;
 }
 /*Agregar responsive
