@@ -23,6 +23,11 @@ const appendClass = (...args) => {
   for (let arg of args) arg.classList.add('boxpaint')
   return args;
 }
+const eneAprJulOct = () => appendClass(enero, abril, julio, octubre);
+
+const febMayAugNov = () => appendClass(febrero, mayo, agosto, noviembre);
+
+const marJunSepDec = () => appendClass(marzo, junio, septiembre, diciembre);
 
 btn.onclick = function (e) {
   e.preventDefault();
@@ -56,13 +61,13 @@ btn.onclick = function (e) {
 
       case 't':
         clearAllBackgroundBox()
-        appendClass(febrero, mayo, agosto, noviembre)
+        febMayAugNov()
         showStockName('AT&T Inc');
         break;
 
       case 'xom':
         clearAllBackgroundBox()
-        appendClass(marzo, junio, septiembre, diciembre)
+        marJunSepDec()
         showStockName('Exxon Mobil Corp')
         break;
 
@@ -114,247 +119,167 @@ btn.onclick = function (e) {
 
       case 'trow':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "T. Rowe Price Group Inc";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("T. Rowe Price Group Inc")
         break;
 
       case 'pfizer':
       case 'pfe':
         clearAllBackgroundBox()
-
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Pfizer Inc";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Pfizer Inc")
         break;
 
       case 'pg':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Procter & Gamble Company";
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName("Procter & Gamble Company")
         break;
 
       case 'vfc':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "VF Corp";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("VF Corp")
         break;
 
       case 'wba':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Walgreens Boots Alliance Inc";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Walgreens Boots Alliance Inc")
         break;
 
       case 'mmm':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "3M Company";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("3M Company")
         break;
 
       case 'ibm':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "International Business Machines";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("International Business Machines")
         break;
 
       case 'leg':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Leggett & Platt Incorporated";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Leggett & Platt Incorporated")
         break;
 
       case 'o':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct, #feb, #mar, #may, #jun, #ago, #sep, #nov, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Realty Income Corp";
+        appendClass(enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre)
+        showStockName("Realty Income Corp")
         break;
 
       case 'abbv':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "AbbVie Inc";
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName("AbbVie Inc")
         break;
 
       case 'amcr':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Amcor PLC";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Amcor PLC")
         break;
 
       case 'frt':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Federal Realty Investment Trust";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Federal Realty Investment Trust")
         break;
 
       case 'ess':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Essex Property Trust Inc";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Essex Property Trust Inc")
         break;
 
       case 'ben':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Franklin Resources Inc";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Franklin Resources Inc")
         break;
 
       case 'kmb':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Kimberly-Clark Corp";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Kimberly-Clark Corp")
         break;
 
       case 'ed':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Consolidated Edison Inc";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Consolidated Edison Inc")
         break;
 
       case 'swk':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Stanley Black & Decker Inc";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Stanley Black & Decker Inc")
         break;
 
       case 'mdt':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
         stockName.textContent = "Medtronic PLC";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Medtronic PLC")
         break;
 
       case 'clx':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Clorox Co";
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName("Clorox Co")
         break;
 
       case 'jnj':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Johnson & Johnson";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Johnson & Johnson")
         break;
 
       case 'sjm':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "JM Smucker Company";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("JM Smucker Company")
         break;
 
       case 'cinf':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Cincinnati Financial Corporation";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Cincinnati Financial Corporation")
         break;
 
       case 'syy':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Sysco Corporation";
+        appendClass(enero, abril, julio, octubre)
+        showStockName("Sysco Corporation")
         break;
 
       case 'cl':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Colgate-Palmolive Company";
+        appendClass(febrero, mayo, agosto, noviembre)
+        showStockName("Colgate-Palmolive Company")
         break;
 
       case 'ato':
         clearAllBackgroundBox()
-        document.querySelectorAll('#mar, #jun, #sep, #dic').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Atmos Energy Corporation";
+        appendClass(marzo, junio, septiembre, diciembre)
+        showStockName("Atmos Energy Corporation")
         break;
 
       case 'cah':
         clearAllBackgroundBox()
-        document.querySelectorAll('#ene, #abr, #jul, #oct').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
+        eneAprJulOct()
+        showStockName("Cardinal Health Inc")
 
-        stockName.textContent = "Cardinal Health Inc";
         break;
 
       case 'apd':
         clearAllBackgroundBox()
-        document.querySelectorAll('#feb, #may, #ago, #nov').forEach((element) => {
-          element.classList.add('boxpaint');
-        });
-
-        stockName.textContent = "Air Products and Chemicals Inc";
+        febMayAugNov()
+        showStockName("Air Products and Chemicals Inc")
         break;
 
       /*Acciones que no pagan dividendo*/
@@ -362,13 +287,12 @@ btn.onclick = function (e) {
       case 'amzn':
       case 'amazon':
         clearAllBackgroundBox()
-        stockName.textContent = 'Amazon no paga dividendos';
+        showStockName("Amazon no paga dividendos")
         break;
 
       default:
         clearAllBackgroundBox()
-        stockName.textContent = 'No stock found';
-
+        showStockName("No stock found")
     }
   }
 
