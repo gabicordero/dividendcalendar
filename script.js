@@ -18,17 +18,20 @@ const octubre = document.getElementById('oct');
 const noviembre = document.getElementById('nov');
 const diciembre = document.getElementById('dic');
 
-// Append class boxpaint in month of stock selected
+// Append class 'boxpaint' in the month of stock selected
+// Agregar clase 'boxpaint' en el mes de la accion seleccionada
 const appendClass = (...args) => {
   for (let arg of args) arg.classList.add('boxpaint')
   return args;
 }
+
 const eneAprJulOct = () => appendClass(enero, abril, julio, octubre);
 
 const febMayAugNov = () => appendClass(febrero, mayo, agosto, noviembre);
 
 const marJunSepDec = () => appendClass(marzo, junio, septiembre, diciembre);
 
+// Manejo del envio del formulario al hacer click en el botón
 btn.onclick = function (e) {
   e.preventDefault();
 
@@ -300,19 +303,20 @@ btn.onclick = function (e) {
 }
 
 // Clear text with name of stock
+// Eliminar text con el nombre de la acción
 
 const clearStockName = () => {
   stockName.textContent = '';
 }
 
 // Show text with name of stock
-
+// Mostrar texto con el nombre de la acción
 const showStockName = (name) => {
   stockName.textContent = name
 }
 
 // Clear all box paint
-
+// Eliminar el color en el div
 const clearAllBackgroundBox = () => {
   boxDiv.forEach((element) => {
     element.classList.remove('boxpaint');
@@ -321,45 +325,67 @@ const clearAllBackgroundBox = () => {
   clearList()
 }
 
+// Arrays con las acciones que pagan dividend dependiendo el mes
+let january = ['syy', 'cinf', 'ko']
+let february = ['aapl', 't']
+let march = []
 
+// elemento del DOM donde se mostrará la info del array
 const stockList = document.querySelector('.div-list')
 
-// Append list of stocks in selected month
+// show list of stocks in selected month
+// mostrar la lista de acciones del seleccionado
+const showStocksInSelectedMonth = (boxDiv) => {
+  let array = []
 
-const appendList = () => {
+  boxDiv.classList.add('paintMonth')
 
-  enero.addEventListener('click', () => {
-    clearAllBox()
-    clearAllBackgroundBox()
-    enero.classList.add('paintMonth')
-    stockList.innerHTML = `
-    <div class="div_list">
-    <span>January:</span>
-    <ul class="ul-list">
-      <li class="stocks">syy</li>
-      <li class="stocks">cinf</li>
-    </ul>
-    </div>
-    `
-  })
+  switch (boxDiv) {
+    case enero:
+      array = january
+      break;
+    case febrero:
+      array = february
+      break;
 
-  febrero.addEventListener('click', () => {
-    clearAllBox()
-    clearAllBackgroundBox()
+    default:
+      break;
+  }
 
-    febrero.classList.add('paintMonth')
-    stockList.innerHTML = `
-    <div class="div_list">
-    <span>February:</span>
-    <ul class="ul-list">
-      <li class="stocks">cl</li>
-    </ul>
-    </div>
-    `
-  })
+  // crear elemento ul para luego agregar los elementos <li>
+  const ulList = document.createElement('ul')
+  ulList.classList.add('ul-list')
+
+  // mostrar nombre del mes según click del usuario
+  stockList.innerHTML = `<span>Dividend-paying stocks in ${boxDiv.children[0].outerText}:</span>`
+
+  // recorrer el array para crear elementos li y agregarlos al ulList
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    const listItem = document.createElement('li')
+    listItem.classList.add('div-list');
+    listItem.textContent = element;
+    ulList.appendChild(listItem)
+  }
+
+  stockList.appendChild(ulList)
+
 }
 
-appendList()
+// agregar escucha de evento click a cada div del mes, limpiar estilos y mostrar acciones en el listado
+// const appendList = (...months) => {
+//   for (let month of months) {
+//     month.addEventListener('click', () => {
+//       clearAllBox()
+//       clearAllBackgroundBox()
+//       showStocksInSelectedMonth(month)
+//       return months
+//     })
+//   }
+// }
+
+// appendList(enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre)
+
 
 // Clear stock list
 const clearList = () => {
@@ -381,8 +407,4 @@ const clearAllBox = () => {
   clearBox()
   clearStockName()
 }
-
-/*Agregar función de hacer click en la card del mes y que figure las acciones que pagan en ese mes
-se puede agregar una animación que gire la card*/
-
 
