@@ -19,6 +19,10 @@ header {
     padding: 20px;
 }
 
+header h1:hover {
+    transform: scale(1.02);
+    transition: .3s ease;
+}
 
 h1 {
     font-size: 25px;
@@ -50,15 +54,17 @@ p {
     background: transparent;
     width: 200px;
     height: 100px;
-    cursor: pointer;
+    /* cursor: pointer; */
     color: #f3f3f3;
     border: 2px solid #f3f3f3;
     transition: .2s ease background;
 }
 
-.box:hover {
+/* .box:hover {
     background: #777777;
-}
+    transition: .3s ease transform;
+    transform: translateX(1px)
+} */
 
 div p {
     margin: 0 auto;
@@ -81,7 +87,7 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background:transparent;
+    background: transparent;
     color: #f3f3f3;
     padding: 8px 20px;
     border: 2px solid #777777;
@@ -131,12 +137,13 @@ input[type="submit"]:hover {
 
 .div-list {
     text-align: center;
-    transition: all 0.3s linear;
+    font-weight: 700;
 }
 
 .paintMonth {
     background: #777777;
 }
+
 /* /*Agregar responsive */
 
 @media (max-width: 767.98px) {
